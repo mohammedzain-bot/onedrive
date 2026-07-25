@@ -47,8 +47,6 @@ html {
 body {
   overflow-x: hidden;
   line-height: 1.6;
-  background: url('../assets/lamborghini_revuelto.jpg') no-repeat center center fixed;
-  background-size: cover;
   background-color: #0c0a09;
 }
 
