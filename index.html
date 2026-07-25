@@ -48,37 +48,83 @@
     </div>
   </header>
 
-  <!-- Hero Section (Desert Supercar Drift Scene matching exact reference photo) -->
-  <section id="home" class="hero-desert-section">
-    <!-- Background Image Layers: Static Backdrop + Rotating Car -->
-    <div class="desert-bg-wrapper" id="desert-bg-wrapper">
-      <div class="studio-static-bg"></div>
-      <!-- ONE DRIVE watermark text -->
+  <!-- Modern Luxury Hero Section -->
+  <section id="home" class="luxury-hero-section">
+    <!-- Ambient Studio Lighting & Volumetric Fog Layers -->
+    <div class="hero-studio-bg">
+      <div class="studio-ambient-glow"></div>
       <div class="hero-brand-bg-text">ONE DRIVE</div>
-      <!-- <img src="assets/mclaren_car_only.png" alt="Supercar" class="desert-hero-img" id="desert-hero-img"> -->
-      <!-- Vignette & Neutral Studio Overlay -->
-      <div class="desert-overlay-gradient"></div>
+      <div class="hero-vignette-overlay"></div>
     </div>
-
-    <!-- Animated Canvas Dust Trail Particles -->
     <canvas id="dust-canvas" class="dust-canvas"></canvas>
 
-    <!-- Bottom Left Heading Content Block -->
-    <div class="hero-bottom-left">
-      <span class="hero-kicker">Speed Meets Style.</span>
-      <p class="hero-caption">Driven by quality.</p>
-    </div>
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <!-- Left Column: Copy & CTAs -->
+        <div class="hero-content-col reveal-left">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">CERAMIC COATING &amp; PPF STUDIO</span>
+          </div>
 
-    <!-- Bottom Right Paragraph & Action Buttons Block -->
-    <div class="hero-bottom-right">
-      <p class="hero-paragraph-right">
-        Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
-      </p>
-      <div class="hero-pill-buttons">
-        <a href="#services" class="btn-pill-white">
-          <span>Explore Our Services</span>
-          <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
-        </a>
+          <h1 class="hero-title-main">
+            UNLEASH PERFECTION. <br>
+            <span class="gold-gradient-text">OWN THE LEGEND.</span>
+          </h1>
+
+          <p class="hero-description">
+            Experience world-class automotive surface protection, precision paint correction, custom wrapping, and premium accessories. Engineered for extreme gloss, hydrophobic resilience, and enduring perfection.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn-luxury-gold">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Book Appointment</span>
+            </a>
+            <a href="#services" class="btn-luxury-outline">
+              <span>Explore Services</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Trust Specs Row -->
+          <div class="hero-trust-specs">
+            <div class="trust-spec-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Self-Healing PPF</span>
+            </div>
+            <div class="trust-spec-divider"></div>
+            <div class="trust-spec-item">
+              <i class="fa-solid fa-droplet"></i>
+              <span>9H Ceramic Coating</span>
+            </div>
+            <div class="trust-spec-divider"></div>
+            <div class="trust-spec-item">
+              <i class="fa-solid fa-award"></i>
+              <span>Master Applicators</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Ceramic-Coated Supercar Feature Card -->
+        <div class="hero-visual-col reveal-right">
+          <div class="car-stage-wrapper">
+            <div class="car-stage-glow"></div>
+            <img src="assets/studio_luxury_car.jpg" alt="Ceramic Coated Luxury Supercar" class="hero-car-featured-img">
+            
+            <!-- Floating Glass Spec Badge -->
+            <div class="glass-spec-badge">
+              <div class="glass-badge-icon">
+                <i class="fa-solid fa-sparkles"></i>
+              </div>
+              <div class="glass-badge-info">
+                <span class="glass-badge-title">Ultra-Gloss Finish</span>
+                <span class="glass-badge-sub">Hydrophobic 9H Shield Applied</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
