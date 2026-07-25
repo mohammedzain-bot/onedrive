@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint Protection Film (PPF) | ONE DRIVE Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .service-hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('assets/ppf_protection.png') no-repeat center center;
+      background-size: cover;
+    }
+    .service-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(15,15,15,0.7), rgba(15,15,15,0.95));
+      z-index: 1;
+    }
+    .service-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    .service-hero-title {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--accent-yellow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+    .service-hero-subtitle {
+      font-size: 1.2rem;
+      color: #fff;
+      font-weight: 400;
+    }
+    .service-details-section {
+      padding: 80px 0;
+      background: transparent;
+    }
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .service-detail-text {
+      padding: 40px;
+    }
+    .service-detail-text h3 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .service-detail-text p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .service-feature-list {
+      list-style: none;
+      margin: 30px 0;
+    }
+    .service-feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .service-feature-list li i {
+      color: var(--accent-yellow);
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body class="desert-theme">
+
+  <header class="header desert-header">
+    <div class="container navbar desert-navbar">
+      <a href="index.html" class="brand-image-link" title="ONE DRIVE"><img src="assets/logo.png" alt="ONE DRIVE Logo" class="brand-image-logo"></a>
+      <ul class="nav-links desert-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services" class="active">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="index.html#location" class="btn-pill-store">Find Stores</a>
+      </div>
+    
+      <!-- Hamburger Menu (Mobile) -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="service-hero">
+    <div class="service-hero-content reveal">
+      <h1 class="service-hero-title">Paint Protection Film</h1>
+      <p class="service-hero-subtitle">The most advanced self-healing TPU shield against rock chips, scratches, and road debris.</p>
+    </div>
+  </section>
+
+  <section class="service-details-section">
+    <div class="container">
+      <div class="service-detail-grid glass-panel reveal-scale">
+        <div class="service-detail-text">
+          <h3>Self-Healing Invisible Shield</h3>
+          <p>
+            Paint Protection Film (PPF) is an ultra-durable, optically clear thermoplastic polyurethane (TPU) film installed directly over your vehicle's factory paint. It is the absolute best defense against the hazards of daily driving.
+          </p>
+          <p>
+            Our premium PPF features self-healing technology. Minor scratches and swirl marks disappear with simple exposure to heat (sunlight or engine heat), maintaining a flawless finish year after year without yellowing or peeling.
+          </p>
+          
+          <ul class="service-feature-list">
+            <li><i class="fa-solid fa-wand-magic-sparkles"></i> Heat-Activated Self-Healing</li>
+            <li><i class="fa-solid fa-rock"></i> Ultimate Stone Chip & Gravel Guard</li>
+            <li><i class="fa-solid fa-eye"></i> Non-Yellowing Optical Clarity</li>
+            <li><i class="fa-solid fa-certificate"></i> 5-10 Years Official Warranty</li>
+          </ul>
+
+          <a href="https://wa.me/919544672007?text=Hi%20ONE%20DRIVE,%20I%20am%20interested%20in%20your%20PPF%20service." target="_blank" class="btn-primary" style="display: inline-flex; width: auto; margin-top: 20px;">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Book via WhatsApp</span>
+          </a>
+        </div>
+        <div style="padding: 20px;">
+          <img src="assets/ppf_protection.png" alt="PPF Application" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><img src="assets/logo.png" alt="ONE DRIVE Logo" class="brand-image-logo" style="height: 90px; margin: 0 auto;"></div>
+      <p>Premier Auto Detailing, PPF, Wraps, Solar Films & Accessories Studio</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; margin-top: 20px;">&copy; 2026 ONE DRIVE. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

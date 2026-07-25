@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE DRIVE | Unleash The Drive - Own The Legend</title>
+  <meta name="description" content="ONE DRIVE is Malappuram's premier automotive studio specializing in Ceramic Coating, PPF, Wrapping, Cooling Film, Polishing, and Custom Accessories in Chattiparamba, Kerala.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="desert-theme">
+
+  <!-- Header & Navigation Bar (Exact Replica of Reference Photo) -->
+  <header class="header desert-header">
+    <div class="container navbar desert-navbar">
+      <!-- Left: Minimalist Circular Ring Brand Icon -->
+      <a href="index.html" class="brand-image-link" title="ONE DRIVE"><img src="assets/logo.png" alt="ONE DRIVE Logo" class="brand-image-logo"></a>
+
+      <!-- Center: Navigation Links -->
+      <ul class="nav-links desert-nav-links">
+        <li><a href="#home" class="active">Discover</a></li>
+        <li><a href="#about">Customer Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services">Fleet</a></li>
+        <li><a href="#location">Locations</a></li>
+      </ul>
+
+      <!-- Right: Action Button -->
+      <div class="header-actions">
+        <a href="#location" class="btn-pill-store">Find Stores</a>
+      </div>
+    
+      <!-- Hamburger Menu (Mobile) -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section (Desert Supercar Drift Scene matching exact reference photo) -->
+  <section id="home" class="hero-desert-section">
+    <!-- Background Image Layers: Static Backdrop + Rotating Car -->
+    <div class="desert-bg-wrapper" id="desert-bg-wrapper">
+      <div class="studio-static-bg"></div>
+      <!-- ONE DRIVE watermark text -->
+      <div class="hero-brand-bg-text">ONE DRIVE</div>
+      <!-- <img src="assets/mclaren_car_only.png" alt="Supercar" class="desert-hero-img" id="desert-hero-img"> -->
+      <!-- Vignette & Neutral Studio Overlay -->
+      <div class="desert-overlay-gradient"></div>
+    </div>
+
+    <!-- Animated Canvas Dust Trail Particles -->
+    <canvas id="dust-canvas" class="dust-canvas"></canvas>
+
+    <!-- Bottom Left Heading Content Block -->
+    <div class="hero-bottom-left">
+      <span class="hero-kicker">Speed Meets Style.</span>
+      <p class="hero-caption">Driven by quality.</p>
+    </div>
+
+    <!-- Bottom Right Paragraph & Action Buttons Block -->
+    <div class="hero-bottom-right">
+      <p class="hero-paragraph-right">
+        Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
+      </p>
+      <div class="hero-pill-buttons">
+        <a href="#services" class="btn-pill-white">
+          <span>Explore Our Services</span>
+          <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-info reveal-left">
+          <h2 class="about-subtitle">WE PROVIDE PROFESSIONAL SERVICE</h2>
+          <div class="about-line"></div>
+          <p class="about-text">
+            At <strong>ONE DRIVE</strong>, we bring world-class automotive surface protection and customization directly to Chattiparamba, Malappuram. Equipped with a dust-free enclosed booth, precision lighting, and certified master applicators, we deliver flawless gloss, long-lasting hydrophobic protection, and bespoke vehicle aesthetics.
+          </p>
+
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Certified Detailers & Applicators</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Dust-Free Climate Controlled Bay</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>International Brand Products</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Multi-Year Official Warranty</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-dark">Book Consultation</a>
+        </div>
+
+        <div class="about-img-box reveal-right">
+          <img src="assets/ceramic_coating.jpg" alt="AutoRx Professional Detailing Service">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (6 Separate Columns with Futuristic Animated WhatsApp Buttons) -->
+  <section id="services" class="services-section section-padding">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">OUR SERVICES</h2>
+        <p class="section-subtitle">Comprehensive automotive surface protection, color transformations, and high-end accessories tailor-made for your ride.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Service 1: Ceramic Coating -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/ceramic_coating.jpg" alt="Ceramic Coating Service">
+            <span class="service-badge">9H & 10H Nano</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Ceramic Coating</h3>
+            <p class="service-desc">
+              Advanced nano-ceramic chemical bond offering deep wet-look gloss, hydrophobic water repelling, and resistance against UV oxidation, chemical stains, and minor scratches.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-shield-halved"></i> 9H/10H Hardness Coating</li>
+              <li><i class="fa-solid fa-droplet"></i> Extreme Hydrophobic Gloss</li>
+              <li><i class="fa-solid fa-sun"></i> UV & Oxidation Shield</li>
+              <li><i class="fa-solid fa-award"></i> Up to 5 Years Warranty</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="ceramic-coating.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Paint Protection Film (PPF) -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/ppf_protection.png" alt="Paint Protection Film PPF">
+            <span class="service-badge">Self-Healing TPU</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">PPF (Paint Protection Film)</h3>
+            <p class="service-desc">
+              Ultra-durable, optically clear thermoplastic polyurethane (TPU) film that shields your vehicle's factory paint against stone chips, scratches, swirl marks, and road debris.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-wand-magic-sparkles"></i> Heat-Activated Self-Healing</li>
+              <li><i class="fa-solid fa-rock"></i> Stone Chip & Gravel Guard</li>
+              <li><i class="fa-solid fa-eye"></i> Non-Yellowing Optical Clarity</li>
+              <li><i class="fa-solid fa-certificate"></i> 5-10 Years Warranty</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="ppf.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Car Wrapping -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/car_wrapping.jpg" alt="Car Vinyl Wrapping">
+            <span class="service-badge">Custom Colors</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Vehicle Wrapping</h3>
+            <p class="service-desc">
+              Transform your car's look completely with premium cast vinyl wraps available in Matte, Gloss, Satin Metallic, Color Shift, and Carbon Fiber custom finishes.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-palette"></i> 100+ Custom Color Shades</li>
+              <li><i class="fa-solid fa-rotate-left"></i> 100% Removable Paint Safe</li>
+              <li><i class="fa-solid fa-shield"></i> Shields Original Paint</li>
+              <li><i class="fa-solid fa-car-side"></i> Full Body & Roof Wraps</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="vehicle-wrapping.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Cooling Film -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/cooling_film.jpg" alt="Cooling Film Window Tint">
+            <span class="service-badge">Solar Heat Rejection</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Cooling Film</h3>
+            <p class="service-desc">
+              High-performance nano-ceramic window solar tinting that blocks up to 99% of UV rays and rejects infrared heat to keep your cabin cool during hot Kerala summers.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-temperature-arrow-down"></i> Up to 85% Heat Rejection</li>
+              <li><i class="fa-solid fa-sun-plant-wilt"></i> 99% Harmful UV Blocking</li>
+              <li><i class="fa-solid fa-user-ninja"></i> Privacy & Anti-Glare</li>
+              <li><i class="fa-solid fa-signal"></i> Non-Interfering Signal Tech</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="cooling-film.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Polishing -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/paint_polishing.jpg" alt="Paint Correction & Polishing">
+            <span class="service-badge">Paint Correction</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Paint Polishing</h3>
+            <p class="service-desc">
+              Multi-stage machine buffing and paint correction process to safely remove swirl marks, haze, minor scratches, and oxidation, restoring a mirror-reflection mirror shine.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-compact-disc"></i> Swirl & Buffer Mark Removal</li>
+              <li><i class="fa-solid fa-sparkles"></i> 3-Stage Compound & Finish</li>
+              <li><i class="fa-solid fa-layer-group"></i> Paint Depth Inspection</li>
+              <li><i class="fa-solid fa-gem"></i> Deep Mirror Finish Shine</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="paint-polishing.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Accessories -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/auto_accessories.jpg" alt="Auto Accessories">
+            <span class="service-badge">Premium Upgrades</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Auto Accessories</h3>
+            <p class="service-desc">
+              Premium interior and exterior accessories range including customized leather seats, app-controlled ambient lighting, Android touchscreen systems, custom audio, and alloy wheels.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-lightbulb"></i> RGB App Ambient Lighting</li>
+              <li><i class="fa-solid fa-couch"></i> Custom Leather Seat Covers</li>
+              <li><i class="fa-solid fa-tv"></i> Android Touch Screen Systems</li>
+              <li><i class="fa-solid fa-sliders"></i> Premium Audio & Alloy Upgrades</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="auto-accessories.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 7: Car Painting -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/car_painting.jpg" alt="Car Painting Service">
+            <span class="service-badge">Full Respray</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Car Painting</h3>
+            <p class="service-desc">
+              Full-body resprays, colour changes, and precision spot repairs using premium 2K lacquers with computer-aided colour matching inside an enclosed dust-free paint booth.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-droplet"></i> Computer Colour Matching</li>
+              <li><i class="fa-solid fa-spray-can-sparkles"></i> Premium 2K Lacquer Coats</li>
+              <li><i class="fa-solid fa-wind"></i> Enclosed Dust-Free Booth</li>
+              <li><i class="fa-solid fa-rotate"></i> Full Respray & Spot Repair</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="car-painting.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 8: Workshop -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/auto_workshop.jpg" alt="Auto Workshop">
+            <span class="service-badge">Expert Mechanics</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Workshop</h3>
+            <p class="service-desc">
+              State-of-the-art mechanical repairs, comprehensive engine diagnostics and professional scheduled servicing by trained technicians for all vehicle makes and models.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-car-on"></i> Hydraulic Lift Inspections</li>
+              <li><i class="fa-solid fa-microchip"></i> Advanced OBD Diagnostics</li>
+              <li><i class="fa-solid fa-gear"></i> Brake & Suspension Repairs</li>
+              <li><i class="fa-solid fa-oil-can"></i> Scheduled Servicing</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="workshop.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 9: Car Washing -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="assets/car_washing.jpg" alt="Premium Car Washing">
+            <span class="service-badge">Snow Foam Wash</span>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Car Washing</h3>
+            <p class="service-desc">
+              Premium snow foam pre-wash, two-bucket hand wash, full interior deep clean, window polish, tyre dressing and wax sealant packages for a perfect spotless finish.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-soap"></i> Snow Foam Pre-Wash</li>
+              <li><i class="fa-solid fa-hand-sparkles"></i> Safe Two-Bucket Method</li>
+              <li><i class="fa-solid fa-couch"></i> Full Interior Deep Clean</li>
+              <li><i class="fa-solid fa-star"></i> Wax Sealant Finish</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="car-washing.html" class="btn-primary">
+                <span>View Service Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessories Showcase Section -->
+  <section id="accessories" class="accessories-section section-padding">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">POPULAR ACCESSORIES</h2>
+        <p class="section-subtitle">Upgrade your driving experience with certified interior, lighting, and entertainment accessories.</p>
+      </div>
+
+      <div class="accessories-grid">
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h4 class="accessory-name">Ambient Interior Lighting</h4>
+          <p class="accessory-desc">App-controlled 64-color fiber optic lighting strips for dashboard and footwell.</p>
+          <a href="https://wa.me/919544672007?text=Hi%20ONE%20DRIVE,%20I%20want%20to%20inquire%20about%20Ambient%20Interior%20Lighting%20installation." target="_blank" class="btn-whatsapp-inquire" style="font-size: 0.8rem; padding: 10px 14px;">Order on WhatsApp</a>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-couch"></i></div>
+          <h4 class="accessory-name">Custom Leather Upholstery</h4>
+          <p class="accessory-desc">Hand-stitched breathable Nappa leather seat covers with customized stitching patterns.</p>
+          <a href="https://wa.me/919544672007?text=Hi%20ONE%20DRIVE,%20I%20want%20to%20inquire%20about%20Custom%20Leather%20Upholstery." target="_blank" class="btn-whatsapp-inquire" style="font-size: 0.8rem; padding: 10px 14px;">Order on WhatsApp</a>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-tv"></i></div>
+          <h4 class="accessory-name">Android Touch Consoles</h4>
+          <p class="accessory-desc">IPS HD Touchscreens with Wireless Apple CarPlay, Android Auto, and 360 Camera support.</p>
+          <a href="https://wa.me/919544672007?text=Hi%20ONE%20DRIVE,%20I%20want%20to%20inquire%20about%20Android%20Touch%20Screen%20Systems." target="_blank" class="btn-whatsapp-inquire" style="font-size: 0.8rem; padding: 10px 14px;">Order on WhatsApp</a>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-shield-cat"></i></div>
+          <h4 class="accessory-name">3D Floor Mats & Care Kits</h4>
+          <p class="accessory-desc">All-weather custom fit 7D leather floor mats & professional DIY car shampoo kits.</p>
+          <a href="https://wa.me/919544672007?text=Hi%20ONE%20DRIVE,%20I%20want%20to%20inquire%20about%207D%20Floor%20Mats%20and%20Care%20Kits." target="_blank" class="btn-whatsapp-inquire" style="font-size: 0.8rem; padding: 10px 14px;">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact Section -->
+  <section id="location" class="contact-section section-padding">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">FIND US AT MALAPPURAM</h2>
+        <p class="section-subtitle">Visit our studio in Chattiparamba or reach out to us directly for bookings and free inspection.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card reveal-left">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-details">
+              <h4>Shop Location Address</h4>
+              <p>Chattiparamba, Cherukulamba,<br>Malappuram, Kerala 676504</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-details">
+              <h4>Phone / Call Us</h4>
+              <p><a href="tel:+919544672007">+91 95446 72007</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="info-details">
+              <h4>Direct WhatsApp Consultation</h4>
+              <p><a href="https://wa.me/919544672007" target="_blank">+91 95446 72007 (Chat Now)</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-details">
+              <h4>Working Hours</h4>
+              <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: By Appointment</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="map-container reveal-right">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.717654714156!2d76.03362145!3d11.02534565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64b6e5114aa4d%3A0x6b403328eef62a93!2sChattiparamba%2C%20Kerala%20676504!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="ONE DRIVE Location Map">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Quick Booking Form Card -->
+      <div id="contact" class="quick-booking-card reveal-scale">
+        <h3 class="section-title text-center" style="font-size: 1.8rem; margin-bottom: 20px;">QUICK SERVICE BOOKING</h3>
+        
+        <form id="quick-booking-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <input type="text" id="booking-name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="booking-phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="booking-model" placeholder="Car / Bike Model (e.g. Swift, BMW 3 Series)" required>
+            </div>
+          </div>
+
+          <div class="form-grid" style="grid-template-columns: 1fr 2fr;">
+            <div class="form-group custom-select-wrapper" id="service-select-wrapper">
+              <div class="custom-select-trigger" id="service-trigger">
+                <span id="service-selected-text">Ceramic Coating</span>
+                <i class="fa-solid fa-chevron-down custom-select-arrow"></i>
+              </div>
+              <ul class="custom-select-dropdown" id="service-dropdown">
+                <li class="custom-select-option selected" data-value="Ceramic Coating">
+                  <i class="fa-solid fa-droplet"></i> Ceramic Coating
+                </li>
+                <li class="custom-select-option" data-value="PPF (Paint Protection Film)">
+                  <i class="fa-solid fa-shield-halved"></i> Paint Protection Film (PPF)
+                </li>
+                <li class="custom-select-option" data-value="Vehicle Wrapping">
+                  <i class="fa-solid fa-car-side"></i> Vehicle Wrapping
+                </li>
+                <li class="custom-select-option" data-value="Cooling Film">
+                  <i class="fa-solid fa-sun"></i> Cooling Film / Window Tint
+                </li>
+                <li class="custom-select-option" data-value="Paint Polishing">
+                  <i class="fa-solid fa-circle-half-stroke"></i> Paint Polishing &amp; Correction
+                </li>
+                <li class="custom-select-option" data-value="Auto Accessories">
+                  <i class="fa-solid fa-wrench"></i> Auto Accessories
+                </li>
+                <li class="custom-select-option" data-value="Car Painting">
+                  <i class="fa-solid fa-spray-can-sparkles"></i> Car Painting
+                </li>
+                <li class="custom-select-option" data-value="Workshop">
+                  <i class="fa-solid fa-gear"></i> Workshop / Mechanical
+                </li>
+                <li class="custom-select-option" data-value="Car Washing">
+                  <i class="fa-solid fa-soap"></i> Car Washing
+                </li>
+              </ul>
+              <!-- Hidden real select for form submission -->
+              <select id="booking-service" required style="display:none;">
+                <option value="Ceramic Coating" selected>Ceramic Coating</option>
+                <option value="PPF (Paint Protection Film)">Paint Protection Film (PPF)</option>
+                <option value="Vehicle Wrapping">Vehicle Wrapping</option>
+                <option value="Cooling Film">Cooling Film / Window Tint</option>
+                <option value="Paint Polishing">Paint Polishing &amp; Correction</option>
+                <option value="Auto Accessories">Auto Accessories</option>
+                <option value="Car Painting">Car Painting</option>
+                <option value="Workshop">Workshop / Mechanical</option>
+                <option value="Car Washing">Car Washing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" id="booking-message" placeholder="Additional details or requested date...">
+            </div>
+          </div>
+
+          <div class="text-center" style="margin-top: 20px;">
+            <button type="submit" class="btn-primary" style="width: auto; min-width: 260px; max-width: 320px; padding: 12px 24px; font-size: 0.82rem;">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i>
+              <span>Send Booking Request via WhatsApp</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><img src="assets/logo.png" alt="ONE DRIVE Logo" class="brand-image-logo" style="height: 90px; margin: 0 auto;"></div>
+      <p>Premier Auto Detailing, PPF, Wraps, Solar Films & Accessories Studio</p>
+      <p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">Chattiparamba, Cherukulamba, Malappuram, Kerala 676504 | Contact: 9544672007</p>
+
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <p style="font-size: 0.8rem; margin-top: 20px;">&copy; 2026 ONE DRIVE. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
