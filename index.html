@@ -50,35 +50,37 @@
 
   <!-- Hero Section (Desert Supercar Drift Scene matching exact reference photo) -->
   <section id="home" class="hero-desert-section">
-    <!-- Background Image Layers: Static Backdrop + Rotating Car -->
+    <!-- Background Image Layers & Low-Opacity Watermark -->
     <div class="desert-bg-wrapper" id="desert-bg-wrapper">
       <div class="studio-static-bg"></div>
-      <!-- ONE DRIVE watermark text -->
       <div class="hero-brand-bg-text">ONE DRIVE</div>
-      <!-- <img src="assets/mclaren_car_only.png" alt="Supercar" class="desert-hero-img" id="desert-hero-img"> -->
-      <!-- Vignette & Neutral Studio Overlay -->
       <div class="desert-overlay-gradient"></div>
     </div>
 
     <!-- Animated Canvas Dust Trail Particles -->
     <canvas id="dust-canvas" class="dust-canvas"></canvas>
 
-    <!-- Bottom Left Heading Content Block -->
-    <div class="hero-bottom-left">
-      <span class="hero-kicker">Speed Meets Style.</span>
-      <p class="hero-caption">Driven by quality.</p>
-    </div>
+    <div class="container hero-container-layout">
+      <!-- Left Side: Heading -->
+      <div class="hero-bottom-left">
+        <span class="hero-kicker">Speed Meets Style.</span>
+        <p class="hero-caption">Driven by quality.</p>
+      </div>
 
-    <!-- Bottom Right Paragraph & Action Buttons Block -->
-    <div class="hero-bottom-right">
-      <p class="hero-paragraph-right">
-        Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
-      </p>
-      <div class="hero-pill-buttons">
-        <a href="#services" class="btn-pill-white">
-          <span>Explore Our Services</span>
-          <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
-        </a>
+      <!-- Right Side: Car Image, Description & CTA -->
+      <div class="hero-bottom-right">
+        <div class="hero-car-wrapper">
+          <img src="assets/studio_luxury_car.jpg" alt="ONE DRIVE Luxury Sports Car" class="desert-hero-img" id="desert-hero-img">
+        </div>
+        <p class="hero-paragraph-right">
+          Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
+        </p>
+        <div class="hero-pill-buttons">
+          <a href="#services" class="btn-pill-white">
+            <span>Explore Our Services</span>
+            <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
