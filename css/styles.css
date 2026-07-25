@@ -1399,26 +1399,27 @@ body {
 
   /* ── Hero Section ── */
   .hero-desert-section { 
-    height: 100dvh; /* use dynamic viewport height to fit mobile screens perfectly */
-    min-height: 600px; /* reduce min-height so it doesn't force scrolling on small phones */
+    height: 100dvh; 
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* push content to the bottom */
+    padding: 0 20px 40px 20px;
   }
 
-  /* Stacking the absolute positioned items without changing HTML layout */
-  .hero-bottom-left {
-    bottom: 200px; /* moved slightly lower */
-    left: 20px;
-    width: 90%;
+  .hero-bottom-left, .hero-bottom-right {
+    position: static; /* allow flexbox to naturally stack them */
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin: 0;
   }
+  
+  .hero-bottom-left { margin-bottom: 20px; }
+  
   .hero-kicker { font-size: 1.8rem; line-height: 1.2; }
   .hero-caption { font-size: 0.9rem; margin-top: 8px; }
 
-  .hero-bottom-right {
-    bottom: 30px;
-    left: 20px;
-    right: 20px;
-    max-width: 100%;
-    text-align: left; /* Align left for mobile readability */
-  }
   .hero-pill-buttons { justify-content: flex-start; }
   .hero-paragraph-right { font-size: 0.85rem; line-height: 1.4; margin-bottom: 15px; }
 
