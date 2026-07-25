@@ -1398,26 +1398,29 @@ body {
   .brand-image-logo { height: 48px; }
 
   /* ── Hero Section ── */
-  .hero-desert-section { min-height: 100vh; }
+  .hero-desert-section { 
+    height: 100dvh; /* use dynamic viewport height to fit mobile screens perfectly */
+    min-height: 600px; /* reduce min-height so it doesn't force scrolling on small phones */
+  }
 
   /* Stacking the absolute positioned items without changing HTML layout */
   .hero-bottom-left {
-    bottom: 240px; /* moved up to make room for bottom right */
+    bottom: 200px; /* moved slightly lower */
     left: 20px;
     width: 90%;
   }
-  .hero-kicker { font-size: 2rem; line-height: 1.2; }
-  .hero-caption { font-size: 0.9rem; margin-top: 12px; }
+  .hero-kicker { font-size: 1.8rem; line-height: 1.2; }
+  .hero-caption { font-size: 0.9rem; margin-top: 8px; }
 
   .hero-bottom-right {
-    bottom: 40px;
+    bottom: 30px;
     left: 20px;
     right: 20px;
     max-width: 100%;
     text-align: left; /* Align left for mobile readability */
   }
   .hero-pill-buttons { justify-content: flex-start; }
-  .hero-paragraph-right { font-size: 0.85rem; line-height: 1.5; margin-bottom: 20px; }
+  .hero-paragraph-right { font-size: 0.85rem; line-height: 1.4; margin-bottom: 15px; }
 
 
   /* ── Section Typography ── */
