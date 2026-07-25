@@ -285,7 +285,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: url('../assets/desert_car_hero.jpg') center/cover no-repeat;
+  background: transparent;
   z-index: 1;
 }
 
@@ -1391,46 +1391,20 @@ body {
   .hero-desert-section { min-height: 100vh; }
 
   .hero-bottom-left {
-    bottom: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    bottom: 40px;
+    left: 20px;
     width: 90%;
   }
   .hero-kicker { font-size: 2rem; line-height: 1.2; }
   .hero-caption { font-size: 0.9rem; margin-top: 12px; }
 
   .hero-bottom-right {
-    position: relative;
-    bottom: auto; right: auto;
-    text-align: center;
-    max-width: 100%;
-    padding: 0 20px 60px;
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    bottom: 40px;
+    right: 20px;
+    max-width: 280px;
   }
-  .hero-paragraph-right { font-size: 0.9rem; line-height: 1.7; }
-  .hero-pill-buttons { justify-content: center; }
+  .hero-paragraph-right { font-size: 0.85rem; line-height: 1.5; }
 
-  /* Rearrange hero for mobile: stack content */
-  .hero-desert-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 40px;
-  }
-  .hero-bottom-left {
-    position: static;
-    transform: none;
-    text-align: center;
-    padding: 120px 20px 20px;
-  }
-  .hero-bottom-right {
-    position: static;
-  }
 
   /* ── Section Typography ── */
   .section-padding { padding: 60px 0; }
