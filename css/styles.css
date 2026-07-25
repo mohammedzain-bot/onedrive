@@ -1323,6 +1323,16 @@ body {
 .hamburger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+
+/* ── Laptop / Small Desktop: 1200px ── */
+@media (max-width: 1200px) {
+  .desert-nav-links { gap: 20px; }
+  .desert-nav-links a { font-size: 0.9rem; }
+  .btn-pill-store { padding: 8px 18px; font-size: 0.85rem; }
+  .hero-bottom-left { left: 4%; }
+  .hero-bottom-right { right: 4%; max-width: 350px; }
+}
+
 /* ── Tablet: 1024px ── */
 @media (max-width: 1024px) {
   .section-padding { padding: 70px 0; }
@@ -1333,11 +1343,11 @@ body {
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .form-grid { grid-template-columns: 1fr; }
 
-  /* Hero */
-  .hero-bottom-left { bottom: 100px; left: 40px; }
-  .hero-bottom-right { bottom: 100px; right: 40px; max-width: 340px; }
-  .hero-kicker { font-size: 2.5rem; }
-
+  /* Hero adjustments */
+  .hero-bottom-left { bottom: 120px; left: 30px; }
+  .hero-bottom-right { bottom: 60px; right: 30px; max-width: 320px; }
+  .hero-kicker { font-size: 2.2rem; }
+  
   /* Service detail grid */
   .service-detail-grid { grid-template-columns: 1fr; }
 }
@@ -1390,8 +1400,9 @@ body {
   /* ── Hero Section ── */
   .hero-desert-section { min-height: 100vh; }
 
+  /* Stacking the absolute positioned items without changing HTML layout */
   .hero-bottom-left {
-    bottom: 40px;
+    bottom: 240px; /* moved up to make room for bottom right */
     left: 20px;
     width: 90%;
   }
@@ -1400,10 +1411,13 @@ body {
 
   .hero-bottom-right {
     bottom: 40px;
+    left: 20px;
     right: 20px;
-    max-width: 280px;
+    max-width: 100%;
+    text-align: left; /* Align left for mobile readability */
   }
-  .hero-paragraph-right { font-size: 0.85rem; line-height: 1.5; }
+  .hero-pill-buttons { justify-content: flex-start; }
+  .hero-paragraph-right { font-size: 0.85rem; line-height: 1.5; margin-bottom: 20px; }
 
 
   /* ── Section Typography ── */
