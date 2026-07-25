@@ -48,80 +48,47 @@
     </div>
   </header>
 
-  <!-- Modern Luxury Hero Section -->
-  <section id="home" class="luxury-hero-section">
-    <!-- Ambient Studio Lighting & Volumetric Fog Layers -->
-    <div class="hero-studio-bg">
-      <div class="studio-ambient-glow"></div>
-      <div class="hero-brand-bg-text">ONE DRIVE</div>
-      <div class="hero-vignette-overlay"></div>
+  <!-- Fullscreen Cinematic Luxury Hero Section -->
+  <section id="home" class="cinematic-hero">
+    <!-- Extremely large background watermark typography (low opacity 5-8%) -->
+    <div class="hero-watermark">ONE DRIVE</div>
+
+    <!-- Cinematic Showroom Background Layers -->
+    <div class="hero-showroom-bg">
+      <div class="showroom-ambient-lights"></div>
+      <div class="showroom-fog"></div>
+      <div class="showroom-vignette"></div>
     </div>
+
+    <!-- Canvas Dust / Fog Particles -->
     <canvas id="dust-canvas" class="dust-canvas"></canvas>
 
     <div class="container hero-container">
-      <div class="hero-grid">
-        <!-- Left Column: Copy & CTAs -->
-        <div class="hero-content-col reveal-left">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            <span class="badge-text">CERAMIC COATING &amp; PPF STUDIO</span>
-          </div>
-
-          <h1 class="hero-title-main">
-            UNLEASH PERFECTION. <br>
-            <span class="gold-gradient-text">OWN THE LEGEND.</span>
-          </h1>
-
-          <p class="hero-description">
-            Experience world-class automotive surface protection, precision paint correction, custom wrapping, and premium accessories. Engineered for extreme gloss, hydrophobic resilience, and enduring perfection.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#contact" class="btn-luxury-gold">
-              <i class="fa-solid fa-calendar-check"></i>
-              <span>Book Appointment</span>
-            </a>
-            <a href="#services" class="btn-luxury-outline">
-              <span>Explore Services</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Trust Specs Row -->
-          <div class="hero-trust-specs">
-            <div class="trust-spec-item">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>Self-Healing PPF</span>
-            </div>
-            <div class="trust-spec-divider"></div>
-            <div class="trust-spec-item">
-              <i class="fa-solid fa-droplet"></i>
-              <span>9H Ceramic Coating</span>
-            </div>
-            <div class="trust-spec-divider"></div>
-            <div class="trust-spec-item">
-              <i class="fa-solid fa-award"></i>
-              <span>Master Applicators</span>
-            </div>
-          </div>
+      <div class="cinematic-hero-grid">
+        
+        <!-- Left Side: Kicker & Headline -->
+        <div class="hero-left-col">
+          <span class="hero-small-kicker">Speed Meets Style.</span>
+          <h1 class="hero-main-title">DRIVEN BY QUALITY.</h1>
         </div>
 
-        <!-- Right Column: Ceramic-Coated Supercar Feature Card -->
-        <div class="hero-visual-col reveal-right">
-          <div class="car-stage-wrapper">
-            <div class="car-stage-glow"></div>
-            <img src="assets/studio_luxury_car.jpg" alt="Ceramic Coated Luxury Supercar" class="hero-car-featured-img">
-            
-            <!-- Floating Glass Spec Badge -->
-            <div class="glass-spec-badge">
-              <div class="glass-badge-icon">
-                <i class="fa-solid fa-sparkles"></i>
-              </div>
-              <div class="glass-badge-info">
-                <span class="glass-badge-title">Ultra-Gloss Finish</span>
-                <span class="glass-badge-sub">Hydrophobic 9H Shield Applied</span>
-              </div>
-            </div>
+        <!-- Right Side: Luxury Sports Car, Description & CTA -->
+        <div class="hero-right-col">
+          <div class="hero-car-container">
+            <div class="car-light-glow"></div>
+            <img src="assets/studio_luxury_car.jpg" alt="ONE DRIVE Luxury Sports Car" class="hero-car-image floating-car">
+            <div class="car-gloss-reflection"></div>
+          </div>
+
+          <p class="hero-description-text">
+            Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
+          </p>
+
+          <div class="hero-cta-wrapper">
+            <a href="#services" class="btn-explore-services">
+              <span>Explore Our Services</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
 
