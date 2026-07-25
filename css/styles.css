@@ -47,6 +47,8 @@ html {
 body {
   overflow-x: hidden;
   line-height: 1.6;
+  background: url('../assets/lamborghini_revuelto.jpg') no-repeat center center fixed;
+  background-size: cover;
   background-color: #0c0a09;
 }
 
@@ -1403,11 +1405,6 @@ body {
 
 /* ── Mobile: max-width 768px — Single column layout ── */
 @media (max-width: 768px) {
-  /* Remove the body background car image on mobile */
-  body {
-    background-image: none;
-    background-color: #0c0a09;
-  }
 
   /* ── Header ── */
   .header.desert-header { padding: 14px 0; }
@@ -1450,14 +1447,13 @@ body {
   /* Brand logo */
   .brand-image-logo { height: 48px; }
 
-  /* ── Hero Section: Single column, solid dark background ── */
+  /* ── Hero Section: Single column, natural document flow ── */
   .hero-desert-section {
     height: auto;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: #0c0a09; /* Cover the body background car image */
   }
 
   /* On mobile, the layout container becomes a vertical flex column
