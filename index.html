@@ -48,50 +48,37 @@
     </div>
   </header>
 
-  <!-- Fullscreen Cinematic Luxury Hero Section -->
-  <section id="home" class="cinematic-hero">
-    <!-- Extremely large background watermark typography (low opacity 5-8%) -->
-    <div class="hero-watermark">ONE DRIVE</div>
-
-    <!-- Cinematic Showroom Background Layers -->
-    <div class="hero-showroom-bg">
-      <div class="showroom-ambient-lights"></div>
-      <div class="showroom-fog"></div>
-      <div class="showroom-vignette"></div>
+  <!-- Hero Section (Desert Supercar Drift Scene matching exact reference photo) -->
+  <section id="home" class="hero-desert-section">
+    <!-- Background Image Layers: Static Backdrop + Rotating Car -->
+    <div class="desert-bg-wrapper" id="desert-bg-wrapper">
+      <div class="studio-static-bg"></div>
+      <!-- ONE DRIVE watermark text -->
+      <div class="hero-brand-bg-text">ONE DRIVE</div>
+      <!-- <img src="assets/mclaren_car_only.png" alt="Supercar" class="desert-hero-img" id="desert-hero-img"> -->
+      <!-- Vignette & Neutral Studio Overlay -->
+      <div class="desert-overlay-gradient"></div>
     </div>
 
-    <!-- Canvas Dust / Fog Particles -->
+    <!-- Animated Canvas Dust Trail Particles -->
     <canvas id="dust-canvas" class="dust-canvas"></canvas>
 
-    <div class="container hero-container">
-      <div class="cinematic-hero-grid">
-        
-        <!-- Left Side: Kicker & Headline -->
-        <div class="hero-left-col">
-          <span class="hero-small-kicker">Speed Meets Style.</span>
-          <h1 class="hero-main-title">DRIVEN BY QUALITY.</h1>
-        </div>
+    <!-- Bottom Left Heading Content Block -->
+    <div class="hero-bottom-left">
+      <span class="hero-kicker">Speed Meets Style.</span>
+      <p class="hero-caption">Driven by quality.</p>
+    </div>
 
-        <!-- Right Side: Luxury Sports Car, Description & CTA -->
-        <div class="hero-right-col">
-          <div class="hero-car-container">
-            <div class="car-light-glow"></div>
-            <img src="assets/studio_luxury_car.jpg" alt="ONE DRIVE Luxury Sports Car" class="hero-car-image floating-car">
-            <div class="car-gloss-reflection"></div>
-          </div>
-
-          <p class="hero-description-text">
-            Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
-          </p>
-
-          <div class="hero-cta-wrapper">
-            <a href="#services" class="btn-explore-services">
-              <span>Explore Our Services</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
+    <!-- Bottom Right Paragraph & Action Buttons Block -->
+    <div class="hero-bottom-right">
+      <p class="hero-paragraph-right">
+        Step Into A World Where Power Meets Precision. Explore Our Exclusive Collection Of High-Performance Sports Cars And Discover The Ride That Matches Your Ambition.
+      </p>
+      <div class="hero-pill-buttons">
+        <a href="#services" class="btn-pill-white">
+          <span>Explore Our Services</span>
+          <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+        </a>
       </div>
     </div>
   </section>

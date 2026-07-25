@@ -70,84 +70,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Cinematic Hero Mouse Parallax Effect ──
-  const cinematicHero = document.querySelector('.cinematic-hero');
-  const heroCarImage = document.querySelector('.hero-car-image');
-  const heroWatermark = document.querySelector('.hero-watermark');
-  const ambientLights = document.querySelector('.showroom-ambient-lights');
+  // 1. Studio Hero Scroll-Based Car Rotation & Mouse Drift
+  const heroSection = document.querySelector('.hero-desert-section');
+  const desertHeroImg = document.getElementById('desert-hero-img');
 
-  if (cinematicHero) {
-    let mouseX = 0;
-    let mouseY = 0;
-    let currX = 0;
-    let currY = 0;
+  if (heroSection && desertHeroImg) {
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let targetRotY = 0;
+    let currentRotY = 0;
 
-    cinematicHero.addEventListener('mousemove', (e) => {
-      const rect = cinematicHero.getBoundingClientRect();
-      mouseX = (e.clientX - rect.left) / rect.width - 0.5;
-      mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+    // Track scroll position to rotate the car
+    window.addEventListener('scroll', () => {
+      // Rotates up to 35 degrees as you scroll down
+      targetRotY = Math.min(window.scrollY * 0.08, 35);
     });
 
-    cinematicHero.addEventListener('mouseleave', () => {
-      mouseX = 0;
-      mouseY = 0;
+    // Track mouse movement for subtle 3D tilt
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      targetX = x * -20; // Panning background depth
+      targetY = y * -12;
     });
 
-    function applyMouseParallax() {
-      currX += (mouseX - currX) * 0.05;
-      currY += (mouseY - currY) * 0.05;
+    heroSection.addEventListener('mouseleave', () => {
+      targetX = 0;
+      targetY = 0;
+    });
 
-      if (heroCarImage) {
-        heroCarImage.style.transform = `perspective(1000px) rotateY(${currX * 12}deg) rotateX(${currY * -8}deg) translate3d(${currX * 15}px, ${currY * 10}px, 0)`;
+    function animateParallax() {
+      // Lerp transition for extra smooth movement
+      currentX += (targetX - currentX) * 0.07;
+      currentY += (targetY - currentY) * 0.07;
+      currentRotY += (targetRotY - currentRotY) * 0.07;
+
+      if (desertHeroImg) {
+        // CSS animation handles the car — JS parallax disabled to prevent conflict
+        // desertHeroImg.style.transform = `...`;
       }
 
-      if (heroWatermark) {
-        heroWatermark.style.transform = `translate(calc(-50% + ${currX * -25}px), calc(-50% + ${currY * -15}px))`;
-      }
-
-      if (ambientLights) {
-        ambientLights.style.transform = `translate(${currX * 30}px, ${currY * 20}px)`;
-      }
-
-      requestAnimationFrame(applyMouseParallax);
+      requestAnimationFrame(animateParallax);
     }
-    applyMouseParallax();
+    animateParallax();
   }
-
-  // ── Button Ripple Effect ──
-  const rippleButtons = document.querySelectorAll('.btn-explore-services, .btn-pill-store, .btn-primary');
-  rippleButtons.forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      const circle = document.createElement('span');
-      const diameter = Math.max(this.clientWidth, this.clientHeight);
-      const radius = diameter / 2;
-      const rect = this.getBoundingClientRect();
-
-      circle.style.width = circle.style.height = `${diameter}px`;
-      circle.style.left = `${e.clientX - rect.left - radius}px`;
-      circle.style.top = `${e.clientY - rect.top - radius}px`;
-      circle.style.position = 'absolute';
-      circle.style.borderRadius = '50%';
-      circle.style.background = 'rgba(255, 255, 255, 0.4)';
-      circle.style.transform = 'scale(0)';
-      circle.style.animation = 'ripple 0.6s linear';
-      circle.style.pointerEvents = 'none';
-
-      const rippleStyle = document.getElementById('ripple-style');
-      if (!rippleStyle) {
-        const style = document.createElement('style');
-        style.id = 'ripple-style';
-        style.innerHTML = `@keyframes ripple { to { transform: scale(4); opacity: 0; } }`;
-        document.head.appendChild(style);
-      }
-
-      this.appendChild(circle);
-
-      setTimeout(() => {
-        circle.remove();
-      }, 600);
-    });
-  });
 
   // 2. Animated Studio Light Floating Motes (Canvas Particles)
   const canvas = document.getElementById('dust-canvas');
