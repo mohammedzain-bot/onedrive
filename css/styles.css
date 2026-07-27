@@ -1472,7 +1472,7 @@ body::before {
   /* ── Hero Section: transparent so body background car shows through ── */
   .hero-desert-section {
     height: auto;
-    min-height: 100dvh;
+    min-height: 120dvh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
