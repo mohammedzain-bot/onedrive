@@ -1422,6 +1422,12 @@ body::before {
 /* ── Mobile: max-width 768px — Single column layout ── */
 @media (max-width: 768px) {
 
+  /* Show the whole car on mobile — contain keeps the full image visible */
+  body::before {
+    background-size: contain;
+    background-position: center 40%;
+  }
+
   /* ── Header ── */
   .header.desert-header { padding: 14px 0; }
   .hamburger-btn { display: flex; }
