@@ -731,6 +731,10 @@ body::before {
   transform: scale(1.08);
 }
 
+/* Mobile-only slider UI — hidden on desktop */
+.mobile-slider-controls,
+.mobile-visit-all { display: none; }
+
 /* Services Section */
 .services-section {
   background-color: var(--bg-darker);
@@ -1555,57 +1559,47 @@ body::before {
   .about-subtitle { font-size: 1.4rem; }
   .about-img-box img { border-radius: 12px; }
 
-  /* ── Services: Mobile Horizontal Snap-Scroll Carousel ── */
+  /* ── Services: Mobile Single-Card Slider ── */
 
-  /* Let the section break out of the container's horizontal padding */
+  /* Reset container padding so card is full-width */
   .services-section .container {
-    overflow: visible;
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* Section header keeps normal padding */
   .services-section .section-header {
     padding: 0 20px;
   }
 
-  /* The grid becomes a horizontal scroll track */
+  /* Grid: stacked, but only active card shown */
   .services-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 0;
+    display: block;
     grid-template-columns: unset;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    padding: 8px 20px 24px 20px;
-    /* fade-out hints on edges so user knows it scrolls */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 92%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 92%, transparent 100%);
+    padding: 0 20px;
   }
 
-  /* Hide scrollbar Chrome/Safari */
-  .services-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Each card: tall cinematic portrait card */
+  /* All cards hidden by default on mobile */
   .service-card {
-    flex: 0 0 220px;
-    width: 220px;
-    min-width: 220px;
-    height: 300px;
-    margin: 0 10px 0 0;
-    border-radius: 20px;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
+    display: none;
+    width: 100%;
+    height: 340px;
+    margin: 0;
+    border-radius: 22px;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.18);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(212,175,55,0.2);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+    animation: slideCardIn 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  /* Only the active card is shown */
+  .service-card.slider-active {
+    display: block;
+  }
+
+  @keyframes slideCardIn {
+    from { opacity: 0; transform: translateX(30px) scale(0.97); }
+    to   { opacity: 1; transform: translateX(0) scale(1); }
   }
 
   /* Full-bleed background image */
@@ -1621,50 +1615,47 @@ body::before {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
   }
 
-  /* Cinematic gradient overlay: dark at bottom, slight dark at top */
+  /* Cinematic dark gradient from bottom */
   .service-img-wrapper::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.25) 0%,
-      rgba(0, 0, 0, 0.05) 30%,
-      rgba(0, 0, 0, 0.6) 65%,
-      rgba(0, 0, 0, 0.92) 100%
+      rgba(0,0,0,0.15) 0%,
+      rgba(0,0,0,0.05) 25%,
+      rgba(0,0,0,0.65) 60%,
+      rgba(0,0,0,0.95) 100%
     );
     z-index: 1;
   }
 
-  /* Gold badge stays top-right */
+  /* Gold badge top-right */
   .service-badge {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    top: 16px;
+    right: 16px;
     left: auto;
     z-index: 3;
-    font-size: 0.6rem;
-    padding: 4px 10px;
+    font-size: 0.62rem;
+    padding: 4px 12px;
     border-radius: 20px;
     background: linear-gradient(135deg, #D4AF37, #B8962E);
     color: #0f0f0f;
     font-weight: 800;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    box-shadow: 0 2px 12px rgba(212,175,55,0.5);
+    box-shadow: 0 2px 14px rgba(212,175,55,0.45);
   }
 
-  /* Content overlaid at the bottom */
+  /* Content pinned to bottom of card */
   .service-content {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     z-index: 2;
-    padding: 16px 16px 18px;
+    padding: 20px 20px 22px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -1673,36 +1664,32 @@ body::before {
   }
 
   .service-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: #fff;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
     margin-bottom: 0;
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    line-height: 1.2;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.6);
   }
 
   .service-desc {
-    font-size: 0.75rem;
-    line-height: 1.45;
-    color: rgba(255,255,255,0.78);
-    margin-bottom: 8px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 10px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  /* Hide bullet list */
-  .service-features-list {
-    display: none;
-  }
+  .service-features-list { display: none; }
 
-  /* Button: slim gold-bordered pill */
   .service-card-footer {
     padding-top: 0;
     border-top: none;
@@ -1710,23 +1697,111 @@ body::before {
   }
 
   .service-card-footer .btn-primary {
-    padding: 8px 14px;
-    font-size: 0.7rem;
+    padding: 9px 18px;
+    font-size: 0.72rem;
     border-radius: 50px;
     gap: 6px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: #fff !important;
-    border: 1px solid rgba(212,175,55,0.55);
+    border: 1px solid rgba(212,175,55,0.5);
     box-shadow: none;
     letter-spacing: 0.5px;
+    width: auto;
+    display: inline-flex;
   }
 
-  /* No hover transform on touch */
-  .service-card:hover {
-    transform: none;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  .service-card:hover { transform: none; box-shadow: 0 12px 40px rgba(0,0,0,0.55); }
+
+  /* ── Slider Controls ── */
+  .mobile-slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 18px;
+    padding: 0 20px;
+  }
+
+  .slider-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(212,175,55,0.4);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    flex-shrink: 0;
+  }
+
+  .slider-arrow:active {
+    transform: scale(0.92);
+    background: rgba(212,175,55,0.18);
+    border-color: #D4AF37;
+  }
+
+  .slider-dots {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 160px;
+  }
+
+  .slider-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+    padding: 0;
+  }
+
+  .slider-dot.active {
+    background: #D4AF37;
+    transform: scale(1.35);
+  }
+
+  /* ── Visit All Services Button ── */
+  .mobile-visit-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .btn-visit-all {
+    display: inline-block;
+    padding: 13px 32px;
+    border-radius: 50px;
+    border: 1px solid rgba(212,175,55,0.5);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+  }
+
+  .btn-visit-all:active {
+    background: rgba(212,175,55,0.15);
+    border-color: #D4AF37;
+    transform: scale(0.97);
   }
 
   /* ── Accessories Grid ── */

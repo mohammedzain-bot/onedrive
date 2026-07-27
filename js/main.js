@@ -306,4 +306,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Mobile Service Slider ──
+  function initMobileSlider() {
+    const cards = Array.from(document.querySelectorAll('.services-grid .service-card'));
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const dotsContainer = document.getElementById('sliderDots');
+
+    if (!cards.length || !prevBtn || !nextBtn || !dotsContainer) return;
+
+    let current = 0;
+
+    // Build dots
+    dotsContainer.innerHTML = '';
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to service ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      cards[current].classList.remove('slider-active');
+      dotsContainer.children[current].classList.remove('active');
+      current = (index + cards.length) % cards.length;
+      cards[current].classList.add('slider-active');
+      dotsContainer.children[current].classList.add('active');
+    }
+
+    // Activate first card
+    cards[0].classList.add('slider-active');
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    // Touch / swipe support
+    let touchStartX = 0;
+    const grid = document.querySelector('.services-grid');
+    if (grid) {
+      grid.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+      grid.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+      });
+    }
+  }
+
+  // Only run slider on mobile
+  if (window.innerWidth <= 768) {
+    initMobileSlider();
+  }
+
 });

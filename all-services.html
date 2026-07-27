@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Services | ONE DRIVE — Malappuram's Premier Automotive Studio</title>
+  <meta name="description" content="Explore all premium automotive services at ONE DRIVE — Ceramic Coating, PPF, Vehicle Wrapping, Cooling Film, Paint Polishing, Auto Accessories, Car Painting, Workshop & Car Washing.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080808;
+      --surface: #111111;
+      --surface2: #161616;
+      --border: rgba(255,255,255,0.07);
+      --gold: #C89B3C;
+      --gold-light: #D4AF37;
+      --text: #F5F5F5;
+      --muted: #888;
+      --font-head: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+    }
+
+    /* ── Navbar ── */
+    .as-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .as-nav-back {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+
+    .as-nav-back:hover { color: var(--text); }
+    .as-nav-back i { font-size: 0.8rem; }
+
+    .as-nav-brand {
+      margin-left: auto;
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: var(--text);
+    }
+
+    /* ── Hero Header ── */
+    .as-hero {
+      padding: 64px 24px 48px;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .as-hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .as-hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .as-hero-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Divider ── */
+    .as-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 24px auto 48px;
+      border-radius: 2px;
+    }
+
+    /* ── Services Grid ── */
+    .as-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── Service Item ── */
+    .as-item {
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 28px 28px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .as-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 28px; right: 28px;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .as-item:hover {
+      background: var(--surface2);
+    }
+
+    .as-item:hover .as-item-arrow {
+      transform: translateX(4px);
+      color: var(--gold);
+    }
+
+    .as-item:hover .as-item-num {
+      color: var(--gold);
+    }
+
+    /* Number */
+    .as-item-num {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.2);
+      min-width: 28px;
+      letter-spacing: 1px;
+      transition: color 0.25s;
+      align-self: flex-start;
+      padding-top: 3px;
+    }
+
+    /* Thumbnail */
+    .as-item-thumb {
+      width: 72px;
+      height: 56px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--surface);
+    }
+
+    .as-item-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .as-item:hover .as-item-thumb img {
+      transform: scale(1.08);
+    }
+
+    /* Text */
+    .as-item-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .as-item-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .as-item-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .as-item-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Arrow */
+    .as-item-arrow {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.25);
+      flex-shrink: 0;
+      transition: transform 0.25s, color 0.25s;
+    }
+
+    /* ── Footer ── */
+    .as-footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .as-footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .as-hero { padding: 48px 20px 36px; }
+      .as-item { padding: 22px 20px; gap: 14px; }
+      .as-item::after { left: 20px; right: 20px; }
+      .as-item-thumb { width: 60px; height: 48px; border-radius: 8px; }
+      .as-item-title { font-size: 0.92rem; }
+      .as-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="as-nav">
+    <a href="index.html" class="as-nav-back">
+      <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+    <span class="as-nav-brand">ONE DRIVE</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="as-hero">
+    <span class="as-hero-eyebrow">Premium Automotive Studio</span>
+    <h1 class="as-hero-title">Our Services</h1>
+    <p class="as-hero-sub">Every service is crafted to elevate your vehicle — from surface protection to full transformation.</p>
+    <div class="as-divider"></div>
+  </div>
+
+  <!-- Services List -->
+  <div class="as-grid">
+
+    <a href="ceramic-coating.html" class="as-item">
+      <span class="as-item-num">01</span>
+      <div class="as-item-thumb">
+        <img src="assets/ceramic_coating.jpg" alt="Ceramic Coating" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">9H &amp; 10H Nano</span>
+        <div class="as-item-title">Ceramic Coating</div>
+        <p class="as-item-desc">Advanced nano-ceramic bond for deep gloss, hydrophobic protection &amp; UV resistance.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="ppf.html" class="as-item">
+      <span class="as-item-num">02</span>
+      <div class="as-item-thumb">
+        <img src="assets/ppf_protection.png" alt="PPF" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Self-Healing TPU</span>
+        <div class="as-item-title">PPF – Paint Protection Film</div>
+        <p class="as-item-desc">Optically clear TPU film guarding against stone chips, scratches &amp; road debris.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="vehicle-wrapping.html" class="as-item">
+      <span class="as-item-num">03</span>
+      <div class="as-item-thumb">
+        <img src="assets/car_wrapping.jpg" alt="Vehicle Wrapping" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Custom Colors</span>
+        <div class="as-item-title">Vehicle Wrapping</div>
+        <p class="as-item-desc">Premium cast vinyl wraps in Matte, Gloss, Satin Metallic, Color Shift &amp; Carbon Fiber.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="cooling-film.html" class="as-item">
+      <span class="as-item-num">04</span>
+      <div class="as-item-thumb">
+        <img src="assets/cooling_film.jpg" alt="Cooling Film" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Solar Heat Rejection</span>
+        <div class="as-item-title">Cooling Film</div>
+        <p class="as-item-desc">Nano-ceramic window tint blocking 99% UV rays &amp; up to 85% infrared heat.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="paint-polishing.html" class="as-item">
+      <span class="as-item-num">05</span>
+      <div class="as-item-thumb">
+        <img src="assets/paint_polishing.jpg" alt="Paint Polishing" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Paint Correction</span>
+        <div class="as-item-title">Paint Polishing</div>
+        <p class="as-item-desc">Multi-stage machine buffing to remove swirl marks, haze &amp; oxidation for a mirror finish.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="auto-accessories.html" class="as-item">
+      <span class="as-item-num">06</span>
+      <div class="as-item-thumb">
+        <img src="assets/auto_accessories.jpg" alt="Auto Accessories" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Premium Upgrades</span>
+        <div class="as-item-title">Auto Accessories</div>
+        <p class="as-item-desc">Leather seats, ambient lighting, Android screens, custom audio &amp; alloy wheels.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="car-painting.html" class="as-item">
+      <span class="as-item-num">07</span>
+      <div class="as-item-thumb">
+        <img src="assets/car_painting.jpg" alt="Car Painting" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Full Respray</span>
+        <div class="as-item-title">Car Painting</div>
+        <p class="as-item-desc">Full-body resprays &amp; spot repairs using premium 2K lacquers in a dust-free booth.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="workshop.html" class="as-item">
+      <span class="as-item-num">08</span>
+      <div class="as-item-thumb">
+        <img src="assets/auto_workshop.jpg" alt="Workshop" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Expert Mechanics</span>
+        <div class="as-item-title">Workshop</div>
+        <p class="as-item-desc">Engine diagnostics, brake &amp; suspension repairs &amp; scheduled servicing for all models.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+    <a href="car-washing.html" class="as-item">
+      <span class="as-item-num">09</span>
+      <div class="as-item-thumb">
+        <img src="assets/car_washing.jpg" alt="Car Washing" loading="lazy">
+      </div>
+      <div class="as-item-body">
+        <span class="as-item-badge">Snow Foam Wash</span>
+        <div class="as-item-title">Car Washing</div>
+        <p class="as-item-desc">Snow foam pre-wash, two-bucket hand wash, interior deep clean &amp; wax sealant packages.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right as-item-arrow"></i>
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="as-footer">
+    <p>&copy; 2025 ONE DRIVE &mdash; Chattiparamba, Malappuram, Kerala &nbsp;&middot;&nbsp; <a href="index.html">Back to Home</a></p>
+  </div>
+
+</body>
+</html>
