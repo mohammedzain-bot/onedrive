@@ -1422,11 +1422,23 @@ body::before {
 /* ── Mobile: max-width 768px — Single column layout ── */
 @media (max-width: 768px) {
 
-  /* Show the whole car on mobile — contain keeps the full image visible */
+  /* Dual-layer trick: stretch & blur the background, keep the car sharp on top */
   body::before {
-    background-size: contain;
-    background-position: center 40%;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(30px) brightness(0.6);
+    transform: scale(1.15); /* hides blurry edges */
   }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('../assets/lamborghini_revuelto.jpg') no-repeat center 40%;
+    background-size: contain;
+    z-index: -1;
+  }
+
 
   /* ── Header ── */
   .header.desert-header { padding: 14px 0; }
@@ -1472,7 +1484,7 @@ body::before {
   /* ── Hero Section: transparent so body background car shows through ── */
   .hero-desert-section {
     height: auto;
-    min-height: 120dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
