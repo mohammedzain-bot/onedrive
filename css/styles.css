@@ -1422,23 +1422,35 @@ body::before {
 /* ── Mobile: max-width 768px — Single column layout ── */
 @media (max-width: 768px) {
 
-  /* Dual-layer trick: stretch & blur the background, keep the car sharp on top */
-  body::before {
+  /* Hide the desktop fixed body background on mobile */
+  body::before { display: none !important; }
+
+  /* Apply the dual-layer trick directly to the hero section background wrapper */
+  .desert-bg-wrapper {
+    background: url('../assets/lamborghini_revuelto.jpg') no-repeat center center;
     background-size: cover;
-    background-position: center center;
-    filter: blur(30px) brightness(0.6);
-    transform: scale(1.15); /* hides blurry edges */
+  }
+  
+  /* The blurred background layer */
+  .desert-bg-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -20px; /* pull out to hide blurred edges */
+    background: url('../assets/lamborghini_revuelto.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(25px) brightness(0.6);
+    z-index: 1;
   }
 
-  body::after {
+  /* The sharp uncropped car on top */
+  .desert-bg-wrapper::after {
     content: '';
-    position: fixed;
+    position: absolute;
     inset: 0;
     background: url('../assets/lamborghini_revuelto.jpg') no-repeat center 40%;
     background-size: contain;
-    z-index: -1;
+    z-index: 2;
   }
-
 
   /* ── Header ── */
   .header.desert-header { padding: 14px 0; }
