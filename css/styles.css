@@ -47,9 +47,20 @@ html {
 body {
   overflow-x: hidden;
   line-height: 1.6;
-  background: url('../assets/lamborghini_revuelto.jpg') no-repeat center center fixed;
-  background-size: cover;
   background-color: #0c0a09;
+  position: relative;
+}
+
+/* iOS/Safari fix: background-attachment:fixed is broken on iOS.
+   Use a fixed pseudo-element instead — works on all browsers/devices. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('../assets/lamborghini_revuelto.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Scrollbar */
@@ -389,9 +400,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(6rem, 15vw, 16rem);
+  /* Responsive: small on mobile, medium on laptop, large on big desktop */
+  font-size: clamp(3rem, 10vw, 10rem);
   font-weight: 900;
-  letter-spacing: 12px;
+  letter-spacing: clamp(4px, 1.5vw, 12px);
   text-transform: uppercase;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.04);
